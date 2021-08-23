@@ -14,7 +14,7 @@ class PostsController extends Controller
         //Fluent
         //DB::table('posts')->where('id', 1)->get()
         $id = 2;
-        $posts = DB::table('posts')->where('created_at', '>', now()->subDay())->orWhere('title', 'Dr.')->get();
+        $posts = DB::table('posts')->where('id', '=', 5)->delete();
         dd($posts);
         // return view('posts/index');
     }
